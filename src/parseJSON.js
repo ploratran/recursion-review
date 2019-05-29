@@ -10,18 +10,18 @@ JSON.parse('[1, 5, "false"]'); // [1, 5, "false"]
 JSON.parse('null');            // null
 */
 var parseJSON = function(json) {
-  // var firstChar = json[0];
-  // //console.log(json.slice(0, 4));
+  var firstChar = json[0];
+  //console.log(json.slice(0, 4));
 
-  // if (firstChar === '[') {
-  //   var array = [];
+  if (firstChar === '[') {
+    var array = [];
     
 
-  // } else if (json.slice(0, 4) == 'null'){
-  //   return null;
-  // } else if(json.slice(0, 4) == 'true'){
-  //   return true
-  // }else if(json.slice(0, 5) == 'false'){
-  //   return false;
-  // }
+  } else if (json.slice(0, 4) === 'null'){
+    return null;
+  } else if(json.slice(0, 4) === 'true'){
+    return true;
+  }else if(json.slice(0, 5) === 'false'){
+    return false;
+  }
 };

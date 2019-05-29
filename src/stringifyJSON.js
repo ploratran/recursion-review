@@ -32,11 +32,11 @@ var stringifyJSON = function(obj) {
   // your code goes here
   var json = '';
 
-  if ( typeof obj == 'boolean' || typeof obj == 'number') { 
+  if ( typeof obj === 'boolean' || typeof obj === 'number') { 
     json += obj; 
-  } else if ( typeof obj == 'string') { 
+  } else if ( typeof obj === 'string') { 
     json += '"' + obj + '"'; 
-  } else if ( typeof obj == 'undefined') { 
+  } else if ( typeof obj === 'undefined') { 
     json += 'undefined'; 
   } else if (Array.isArray(obj)) {
     json += '[';
@@ -48,7 +48,7 @@ var stringifyJSON = function(obj) {
       }
     }
     json += ']';  
-  } else if (typeof obj == 'object') {
+  } else if (typeof obj === 'object') {
     if (obj === null) {
       json += "null";
     } else {
